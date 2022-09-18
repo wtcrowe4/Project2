@@ -9,29 +9,30 @@ var router = express.Router();
 
 
 //Database
-mongoose.connect(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true})
-    .then(() => console.log(`MongoDB Connected at ${mongoURI}`));
+// mongoose.connect(mongoURI, () => console.log(`MongoDB Connected at ${mongoURI}`));
 
+//Middleware
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+app.use(express.static('public'));
 
 //Routes
+app.get('/', (req, res) => {
+    res.render('index.html');
+});
+
+app.get('/about', (req, res) => {
+    res.render('about.html');
+});
+
+app.get('/contact', (req, res) => {
+    res.render('contact.html');
+});
+
+app.get('/blog', (req, res) => {
+    res.render('blog.html');
+});
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.listen(port)
-    .then(console.log(`Server is running on port ${port}`));
+app.listen(port, () => console.log(`Server is running on port ${port}`));
