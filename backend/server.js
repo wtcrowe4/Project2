@@ -4,7 +4,7 @@ var app = express();
 require('dotenv').config();
 var mongoose = require('mongoose');
 var mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/yourDB';
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 4000;
 var router = express.Router();
 
 
