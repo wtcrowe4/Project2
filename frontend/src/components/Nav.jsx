@@ -1,5 +1,6 @@
 import React from "react";
 import '../App.css';
+//react router
 
 const Nav = (props) => {
     return (
@@ -10,13 +11,13 @@ const Nav = (props) => {
                         <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="/about">About</a>
+                        <a href="/signin">Sign In</a>
                     </li>
                     <li>
-                        <a href="/contact">Contact</a>
+                        <a href="/todos">To Do Lists</a>
                     </li>
                     <li>
-                        <a href="/blog">Blog</a>
+                        <a href="/settings">Account Settings</a>
                     </li>
                 </ul>
             </nav>
